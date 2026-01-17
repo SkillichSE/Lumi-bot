@@ -101,7 +101,7 @@ async def memorize(message: types.Message):
         await message.reply("❌ Напиши что запомнить: /memorize <текст>", parse_mode=ParseMode.HTML)
         return
     add_note(chat_id, text)
-    await message.reply(f"💾 Запомнила для тебя: {text}", parse_mode=ParseMode.HTML)
+    await message.reply(f"💾 Запомнила для чата: {text}", parse_mode=ParseMode.HTML)
 
 @dp.message(Command("show_memory"))
 async def show_memory(message: types.Message):
@@ -228,3 +228,4 @@ async def chat_response(message: types.Message):
 if __name__ == "__main__":
     print("✅ Lumi bot started.")
     asyncio.run(dp.start_polling(bot))
+
