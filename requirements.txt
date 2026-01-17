@@ -1,3 +1,4 @@
-aiogram==3.0.1
+aiogram==3.24.0
 httpx==1.2.3
 python-dotenv==1.0.0
+
