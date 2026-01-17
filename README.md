@@ -25,30 +25,35 @@ Responds to messages, remembers chat history, and speaks in different moods. Tri
 1. **Clone the repo:**  
 ```bash
 git clone <repo_url>
-cd lumi-userbot
+cd lumi-bot
 ```
 
 2. **Create a virtual environment and install dependencies:**  
 ```bash
 python -m venv .venv
+
 # Linux/macOS
 source .venv/bin/activate
+
 # Windows
 .venv\Scripts\activate
+
 pip install -r requirements.txt
+
 ```
 
-3. **Copy `.env.example` to `.env` and fill in your data:**  
+3. **Copy `.example.env` to `.env` and fill in your data:**  
 ```env
 TG_API_ID=12345678
 TG_API_HASH="1234567890"
+BOT_TOKEN="1234567890:ABCDEF..."
 OWNER_ID=1212121212
-SESSION_NAME="lumi_userbot"
+HISTORY_MAX=10
 ```
 
 4. **Run the bot:**  
 ```bash
-python start_work.py
+python bot.py
 ```
 
 > Make sure **LM Studio** is running at `http://localhost:1234`.
@@ -95,8 +100,10 @@ python start_work.py
 ## Notes
 
 - User-facing messages: **Russian**  
-- Developer comments, README, and instructions: **English**  
+- Developer comments, README, and instructions: **English**
+- **HISTORY_MAX** can be adjusted in .env to change how many last messages are included in AI context
 - `PROJECT_LINKS` in code can be changed for your own references  
+
 
 
 
