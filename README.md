@@ -103,6 +103,7 @@ python bot.py
 - Developer comments, README, and instructions: **English**
 - **HISTORY_MAX** can be adjusted in .env to change how many last messages are included in AI context
 - `PROJECT_LINKS` in code can be changed for your own references  
+# Also try <a href="https://github.com/SkillichSE/Lumi-userbot">userbot version</a>
 
 
 
