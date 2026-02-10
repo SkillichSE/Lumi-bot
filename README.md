@@ -1,5 +1,7 @@
 # Lumi bot
+
 <img width="500" height="500" alt="Image" src="https://github.com/user-attachments/assets/377255ad-beec-45ee-b631-b9f7e1eea769" />
+
 A Telegram **bot** integrated with a local LLM (LM Studio).  
 Responds to messages, remembers chat history, and speaks in different moods. Triggered by the name **“Lumi”**.
 ## User-facing messages: **Russian**
@@ -104,6 +106,7 @@ python bot.py
 - **HISTORY_MAX** can be adjusted in .env to change how many last messages are included in AI context
 - `PROJECT_LINKS` in code can be changed for your own references  
 # Also try <a href="https://github.com/SkillichSE/Lumi-userbot">userbot version</a>
+
 
 
 
