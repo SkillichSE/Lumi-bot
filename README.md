@@ -107,6 +107,7 @@ python bot.py
 - `PROJECT_LINKS` in code can be changed for your own references  
 # Also try <a href="https://github.com/SkillichSE/Lumi-userbot">userbot version</a>
 
+<img width="454" height="278" alt="Image" src="https://github.com/user-attachments/assets/e10a230f-c94a-490b-a40b-453eb2e33c92" />
 
 
 
