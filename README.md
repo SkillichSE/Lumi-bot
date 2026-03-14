@@ -57,7 +57,7 @@
 </table>
 
 <details>
-<summary><b>View Screenshots</b></summary>
+##<summary><b>View Screenshots</b></summary>
 
 ### Chat Example
 <img width="990" alt="Chat" src="https://github.com/user-attachments/assets/3ce9da92-3388-44bb-8b5f-8f02a46e442b" />
