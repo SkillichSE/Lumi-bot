@@ -58,36 +58,36 @@ HISTORY_MAX=10
 python bot.py
 ```
 
-> Make sure **LM Studio** is running at `http://localhost:1234`.
-
+> Make sure **LM Studio** is running at `http://localhost:1234`
+- recomend to install tool `mcp/web-search` for model
 ---
 
 ## Commands
 
 **General:**
 
-- `/lumi` — info and project links  
-- `/commands` — command reference  
-- `/ping` — check response time  
-- `/model` — show active model  
-- `/prompt` — show system prompt (*lot of text!*) 
+- `/lumi` - info and project links  
+- `/commands` - command reference  
+- `/ping` - check response time  
+- `/model` - show active model  
+- `/prompt` - show system prompt (*lot of text!*) 
 
 **Memory:**
 
-- `/memorize <text>` — save a note  
-- `/show_memory` — list saved notes  
-- `/forget` — delete all notes  
-- `/forget <number>` — delete a single note  
+- `/memorize <text>` - save a note  
+- `/show_memory` - list saved notes  
+- `/forget` - delete all notes  
+- `/forget <number>` - delete a single note  
 
 **Moods:**
 
-- `/mood` — show current mood  
-- `/mood <mood>` — set mood (friendly, sarcastic, formal, funny, aggressive, horny, uncensored, shy)  
-- `/mood list` — list available moods  
+- `/mood` - show current mood  
+- `/mood <mood>` - set mood (friendly, sarcastic, formal, funny, aggressive, horny, uncensored, shy)  
+- `/mood list` - list available moods  
 
 **Owner-only (OWNER_ID):**
 
-- `/reset` — clear chat memory, history, and reset mood  
+- `/reset` - clear chat memory, history, and reset mood  
 
 ---
 
@@ -97,7 +97,7 @@ python bot.py
 - Default model: `llama-3.1-8b-instruct`  
 - Request timeout: 60s  
 
----
+
 
 ## Notes
 
