@@ -1,50 +1,105 @@
-# Lumi bot
+<div align="center">
+  <img width="600" height="600" alt="Lumi Bot" src="https://github.com/user-attachments/assets/15d9ccbb-9cee-4afd-ba67-eebfe8ee168d" />
+  
+  # Lumi Bot
+  
+  **Telegram bot integrated with local LLM (LM Studio)**
+  
+  Responds to messages, remembers chat history, and speaks in different moods. Triggered by the name **"Lumi"**.
+  
+  [![Python](https://img.shields.io/badge/Python-3.8+-3776AB?style=flat-square&logo=python&logoColor=white)](https://python.org)
+  [![Telethon](https://img.shields.io/badge/Telethon-1.24+-2CA5E0?style=flat-square&logo=telegram&logoColor=white)](https://docs.telethon.dev)
+  [![LM Studio](https://img.shields.io/badge/LM_Studio-Local_AI-FF6B6B?style=flat-square)](https://lmstudio.ai)
+  
+  **User-facing messages: Russian**
+  
+</div>
 
-<img width="600" height="600" alt="Image" src="https://github.com/user-attachments/assets/15d9ccbb-9cee-4afd-ba67-eebfe8ee168d" />
-
-A Telegram **bot** integrated with a local LLM (LM Studio).  
-Responds to messages, remembers chat history, and speaks in different moods. Triggered by the name **“Lumi”**.
-## User-facing messages: **Russian**
-![Image](https://github.com/user-attachments/assets/3ce9da92-3388-44bb-8b5f-8f02a46e442b)
 ---
+
 ## Features
 
-- Local AI replies via LM Studio (`llama-3.1-8b-instruct`)
-- <img width="990" height="209" alt="Image" src="https://github.com/user-attachments/assets/5fe92dca-e033-45b3-8985-fea37bd7a664" />
-- Chat memory per conversation
-- <img width="392" height="243" alt="Image" src="https://github.com/user-attachments/assets/527b42fd-9e24-4ac4-a409-45efddb6a001" />
-- Multiple moods (friendly, sarcastic, formal, funny, aggressive, horny, uncensored, shy)
-- <img width="702" height="551" alt="Image" src="https://github.com/user-attachments/assets/50d58138-2dd3-4f41-bca5-149a9e72b2b8" />
-- Commands for memory and bot management
-- <img width="624" height="243" alt="Image" src="https://github.com/user-attachments/assets/f47ec303-9323-4f10-9791-eea932d35ea1" />  
-- Owner-only reset command
-- <img width="588" height="295" alt="Image" src="https://github.com/user-attachments/assets/8185d2ef-34f4-47c9-aacd-80217a697187" />  
+<table>
+<tr>
+<td width="50%">
+
+**Local AI Integration**
+- LM Studio API (`llama-3.1-8b-instruct`)
+- Web search tool support via MCP
+
+</td>
+<td width="50%">
+
+**Smart Memory System**
+- Per-chat conversation history
+- Persistent memory notes
+- Contextual responses
+
+</td>
+</tr>
+<tr>
+<td>
+
+**Multiple Personalities**
+- friendly, sarcastic, formal, funny
+- aggressive, horny, uncensored, shy
+
+</td>
+<td>
+
+**Management Commands**
+- Memory operations
+- Mood switching
+- Owner-only controls
+
+</td>
+</tr>
+</table>
+
+<details>
+<summary><b>View Screenshots</b></summary>
+
+### Chat Example
+<img width="990" alt="Chat" src="https://github.com/user-attachments/assets/3ce9da92-3388-44bb-8b5f-8f02a46e442b" />
+
+### Memory System
+<img width="392" alt="Memory" src="https://github.com/user-attachments/assets/527b42fd-9e24-4ac4-a409-45efddb6a001" />
+
+### Mood Selection
+<img width="702" alt="Moods" src="https://github.com/user-attachments/assets/50d58138-2dd3-4f41-bca5-149a9e72b2b8" />
+
+### Commands
+<img width="624" alt="Commands" src="https://github.com/user-attachments/assets/f47ec303-9323-4f10-9791-eea932d35ea1" />
+
+### Reset Function
+<img width="588" alt="Reset" src="https://github.com/user-attachments/assets/8185d2ef-34f4-47c9-aacd-80217a697187" />
+
+</details>
 
 ---
 
 ## Installation
-
-1. **Clone the repo:**  
 ```bash
+# Clone repository
 git clone <repo_url>
 cd lumi-bot
-```
 
-2. **Create a virtual environment and install dependencies:**  
-```bash
+# Setup virtual environment
 python -m venv .venv
 
-# Linux/macOS
+# Activate environment
+# Linux/macOS:
 source .venv/bin/activate
-
-# Windows
+# Windows:
 .venv\Scripts\activate
 
+# Install dependencies
 pip install -r requirements.txt
-
 ```
 
-3. **Copy `.example.env` to `.env` and fill in your data:**  
+### Configuration
+
+Copy `.example.env` to `.env` and configure:
 ```env
 TG_API_ID=12345678
 TG_API_HASH="1234567890"
@@ -53,72 +108,81 @@ OWNER_ID=1212121212
 HISTORY_MAX=10
 ```
 
-4. **Run the bot:**  
+### Running
 ```bash
 python bot.py
 ```
 
-> Make sure **LM Studio** is running at `http://localhost:1234`
-- recomend to install tool `mcp/web-search` for model
----
-
-## Commands
-
-**General:**
-
-- `/lumi` - info and project links  
-- `/commands` - command reference  
-- `/ping` - check response time  
-- `/model` - show active model  
-- `/prompt` - show system prompt (*lot of text!*) 
-
-**Memory:**
-
-- `/memorize <text>` - save a note  
-- `/show_memory` - list saved notes  
-- `/forget` - delete all notes  
-- `/forget <number>` - delete a single note  
-
-**Moods:**
-
-- `/mood` - show current mood  
-- `/mood <mood>` - set mood (friendly, sarcastic, formal, funny, aggressive, horny, uncensored, shy)  
-- `/mood list` - list available moods  
-
-**Owner-only (OWNER_ID):**
-
-- `/reset` - clear chat memory, history, and reset mood  
+> **Important:** LM Studio must be running at `http://localhost:1234`  
+> **Recommended:** Install `mcp/web-search` tool for enhanced model capabilities
 
 ---
 
-## LM Studio Settings
+## Commands Reference
 
-- Default API: `http://localhost:1234/v1/chat/completions`  
-- Default model: `llama-3.1-8b-instruct`  
-- Request timeout: 60s  
+### General
+| Command | Description |
+|---------|-------------|
+| `/lumi` | Info and project links |
+| `/commands` | Command reference |
+| `/ping` | Check response time |
+| `/model` | Show active model |
+| `/prompt` | Show system prompt |
 
+### Memory Management
+| Command | Description |
+|---------|-------------|
+| `/memorize <text>` | Save a note |
+| `/show_memory` | List saved notes |
+| `/forget` | Delete all notes |
+| `/forget <number>` | Delete specific note |
 
+### Mood Control
+| Command | Description |
+|---------|-------------|
+| `/mood` | Show current mood |
+| `/mood <mood>` | Set mood |
+| `/mood list` | List available moods |
 
-## Notes
+**Available moods:** `friendly`, `sarcastic`, `formal`, `funny`, `aggressive`, `horny`, `uncensored`, `shy`
 
-- User-facing messages: **Russian**  
-- Developer comments, README, and instructions: **English**
-- **HISTORY_MAX** can be adjusted in .env to change how many last messages are included in AI context
-- `PROJECT_LINKS` in code can be changed for your own references  
-# Also try <a href="https://github.com/SkillichSE/Lumi-userbot">userbot version</a>
+### Owner Commands
+| Command | Description |
+|---------|-------------|
+| `/reset` | Clear chat memory, history, and reset mood |
 
-<img width="454" height="278" alt="Image" src="https://github.com/user-attachments/assets/e10a230f-c94a-490b-a40b-453eb2e33c92" />
+---
 
+## LM Studio Configuration
+```yaml
+API Endpoint: http://localhost:1234/v1/chat/completions
+Default Model: llama-3.1-8b-instruct
+Request Timeout: 60 seconds
+Temperature: 0.7
+Max Tokens: 300
+```
 
+---
 
+## Technical Notes
 
+- **User-facing messages:** Russian
+- **Developer resources:** English
+- **HISTORY_MAX:** Adjustable in `.env` for context window size
+- **PROJECT_LINKS:** Customizable in source code for your own references
 
+---
 
+<div align="center">
 
+### Also Available
 
+## [Lumi Userbot Version](https://github.com/SkillichSE/Lumi-userbot)
 
+<img width="454" alt="Userbot" src="https://github.com/user-attachments/assets/e10a230f-c94a-490b-a40b-453eb2e33c92" />
 
+---
 
+**Made with local AI**
 
-
-
+</div>
