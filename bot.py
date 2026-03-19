@@ -14,11 +14,10 @@ bot = Bot(token=BOT_TOKEN)
 dp = Dispatcher()
 
 # Chat history and moods
-HISTORY = {}      # {chat_id: [(username, message)]}
-MODEL_MOOD = {}   # {chat_id: mood}
-CHAT_USERS = {}   # {user_id: username}
+HISTORY = {}
+MODEL_MOOD = {} 
+CHAT_USERS = {}  
 
-# ---------- Command handlers ----------
 
 @dp.message(Command("start"))
 async def start_handler(message: types.Message):
@@ -91,7 +90,6 @@ async def prompt_cmd(message: types.Message):
 """
     await message.answer(f"<pre>{system_content}</pre>", parse_mode=ParseMode.HTML)
 
-# ---------- Memory commands ----------
 
 @dp.message(lambda m: m.text and m.text.lower().startswith("/memorize "))
 async def memorize(message: types.Message):
@@ -134,17 +132,14 @@ async def forget(message: types.Message):
         return
     await message.reply("❌ Использование: /forget или /forget <номер>", parse_mode=ParseMode.HTML)
 
-# ---------- Mood commands ----------
 
 @dp.message(Command("mood"))
 async def mood_handler(message: types.Message):
     chat_id = message.chat.id
     text = message.text or ""
 
-    # Получаем всё, что после "/mood "
     args = text[len("/mood"):].strip().lower()
 
-    # /mood — показать текущее настроение
     if not args:
         mood = MODEL_MOOD.get(chat_id, DEFAULT_MOOD)
         await message.reply(
@@ -154,14 +149,12 @@ async def mood_handler(message: types.Message):
         )
         return
 
-    # /mood list — показать список
     if args == "list":
         await message.reply(
             "🎭 Доступные настроения:\n" + ", ".join(MOOD_PROMPTS.keys())
         )
         return
 
-    # /mood <настроение> — установить
     if args not in MOOD_PROMPTS:
         await message.reply(
             f"❌ Неизвестное настроение.\nДоступные: {', '.join(MOOD_PROMPTS.keys())}"
@@ -170,8 +163,6 @@ async def mood_handler(message: types.Message):
 
     MODEL_MOOD[chat_id] = args
     await message.reply(f"✅ Настроение изменено на: {args}")
-
-# ---------- Owner-only command ----------
 
 @dp.message(Command("reset"))
 async def reset(message: types.Message):
@@ -189,7 +180,6 @@ async def reset(message: types.Message):
     MODEL_MOOD[chat_id] = DEFAULT_MOOD
     await message.reply("♻️ Полный сброс выполнен: память и история очищены, настроение сброшено.", parse_mode=ParseMode.HTML)
 
-# ---------- Chat response ----------
 
 @dp.message()
 async def chat_response(message: types.Message):
@@ -223,7 +213,7 @@ async def chat_response(message: types.Message):
             error_logger.exception(f"Error responding: {e}")
             await message.reply("⚠️ Произошла ошибка при обработке сообщения.", parse_mode=ParseMode.HTML)
 
-# ---------- Main ----------
+
 
 if __name__ == "__main__":
     print("✅ Lumi bot started.")
