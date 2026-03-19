@@ -103,10 +103,8 @@ pip install -r requirements.txt
 
 Copy `.example.env` to `.env` and configure:
 ```env
-TG_API_ID=12345678
-TG_API_HASH="1234567890"
-BOT_TOKEN="1234567890:ABCDEF..."
-OWNER_ID=1212121212
+BOT_TOKEN="1234567890:ABCDEF..." # get from @BotFather
+OWNER_ID=1212121212 # who use some dev commands
 HISTORY_MAX=10
 ```
 
