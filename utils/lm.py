@@ -22,8 +22,6 @@ async def ask_model(prompt: str, chat_id: int, sender_id: int) -> str:
     memory_text = "\n".join(get_notes(chat_id)) or "— нет записей —"
 
     system_content = f"""
-Ты — женская ассистентка Люми. Отвечай кратко и по фактам.
-
 {mood_text}
 
 Сейчас к тебе обращается {username}.
