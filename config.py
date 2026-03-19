@@ -8,8 +8,6 @@ from dotenv import load_dotenv
 load_dotenv(dotenv_path=Path(__file__).parent / ".env")
 
 # Telegram API credentials
-API_ID = int(os.getenv("TG_API_ID") or 0)
-API_HASH = os.getenv("TG_API_HASH") or ""
 BOT_TOKEN = os.getenv("BOT_TOKEN") or ""
 
 # Owner ID (for /reset command)
