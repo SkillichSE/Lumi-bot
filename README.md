@@ -1,5 +1,5 @@
 <div align="center">
-  <img width="600" height="600" alt="Lumi Bot" src="https://github.com/user-attachments/assets/15d9ccbb-9cee-4afd-ba67-eebfe8ee168d" />
+  <img width="300" height="300" alt="Lumi Bot" src="https://github.com/user-attachments/assets/15d9ccbb-9cee-4afd-ba67-eebfe8ee168d" />
   
   # Lumi Bot
   
