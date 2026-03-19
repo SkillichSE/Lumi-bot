@@ -57,7 +57,9 @@
 </table>
 
 <details>
-<summary style="font-size: 56px; font-weight: bold;">📸 View Screenshots</summary>
+  <summary>
+    <h2 style="display: inline;">📸 View Screenshots</h2>
+  </summary>
 
 ### Chat Example
 <img width="990" alt="Chat" src="https://github.com/user-attachments/assets/3ce9da92-3388-44bb-8b5f-8f02a46e442b" />
