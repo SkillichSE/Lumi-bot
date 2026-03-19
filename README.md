@@ -24,7 +24,7 @@
 <td width="50%">
 
 **Local AI Integration**
-- LM Studio API (`llama-3.1-8b-instruct`)
+- LM Studio API (`any model`)
 - Web search tool support via MCP
 
 </td>
